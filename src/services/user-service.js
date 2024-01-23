@@ -1,7 +1,7 @@
 const User=require()
-const bycrypt=require("bycrypt");
+const bcrypt=require("bcrypt");
 
-const createuser=async(userdata)=>{
+const createUser=async(userData)=>{
     try{
         let{firstName,lastName,email,password}=userData;
 
@@ -10,7 +10,7 @@ const createuser=async(userdata)=>{
             throw new error("An user already exists with this email:",email);
 
         }
-        password=await bycrypt.hash(password,8);
+        password=await bcrypt.hash(password,8);
     } catch(error){
 
     }
