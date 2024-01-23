@@ -11,6 +11,9 @@ const createUser=async(userData)=>{
 
         }
         password=await bcrypt.hash(password,8);
+    
+        const user=await User.create
+
     } catch(error){
 
     }
